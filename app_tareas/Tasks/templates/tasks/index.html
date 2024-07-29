@@ -1,0 +1,17 @@
+
+{% extends 'tasks/base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Lista de Tareas</h2>
+<ul>
+    {% for tarea in tareas %}
+    <li>
+        <a href="{% url 'tarea_detail' tarea.pk %}">{{ tarea.nombre }}</a>
+    </li>
+    {% endfor %}
+
+</ul>
+<a href="{% url 'tarea_create' %}">Crear Nueva Tarea</a>
+
+{% endblock %}

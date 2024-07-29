@@ -1,0 +1,14 @@
+{% extends 'tasks/base.html' %}
+
+{% block content %}
+<h2>{{ tarea.nombre }}</h2>
+<p>{{ tarea.descripcion }}</p>
+<p>Prioridad: {{ tarea.prioridad }}</p>
+<p>Completada: {{ tarea.completada }}</p>
+<p>Última fecha a presentar: {{ tarea.ultima_fecha_a_presentar }}</p>
+<a href="{% url 'tarea_update' tarea.pk %}">Editar</a>
+<form method="post" action="{% url 'tarea_delete' tarea.pk %}">
+    {% csrf_token %}
+    <button type="submit">Eliminar</button>
+</form>
+{% endblock %}
