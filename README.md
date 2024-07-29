@@ -1,8 +1,11 @@
 para inicializar el proyecto:
 
 git clone https://github.com/GracielaCy/ProyectoDjangoGracielaCayo
+
 cd proyectoDjangoCayo/
+
 python -m venv venv
+
 source .\venv\Scripts\activate
 
 pip install  requirements.txt
